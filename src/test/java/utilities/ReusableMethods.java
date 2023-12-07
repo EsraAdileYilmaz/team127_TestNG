@@ -39,23 +39,24 @@ public class ReusableMethods {
 
 
 
-    public static WebDriver titleIleSayfaDegistir(WebDriver driver, String hedefSayfaTitle) {
+    public static void titleIleSayfaDegistir(String hedefSayfaTitle) {
 
-        Set<String> tumWhdSeti=driver.getWindowHandles();
+        Set<String> tumWhdSeti=Driver.getDriver().getWindowHandles();
+
         for (String each:tumWhdSeti
              ) {
-            String eachTitle=driver.switchTo().window(each).getTitle();
+
+            String eachTitle=Driver.getDriver().switchTo().window(each).getTitle();
             //driver'imiz each'in getirdigi herbir yeni window'a sirasiyla gecip oranin title'ini getirecek.bizde bunu String bir variable'a atayacagiz.
 
             if(eachTitle.equals(hedefSayfaTitle)){//each'in getirdigi title,
-                                                  //bizim hedef title'imiza esit oldugunda
+                                                  //bizim hedefSayfatitle'imiza esit oldugunda
                                                   // driver direk o window'a gececek.
-                return driver;
+               break;//title'lar esit oldugunda loop'u durdur.birak.
             }
         }
-     //bu methodla istenilen kadar whd verilse bile icinden hedefSayfaTitle'ini bulup
-     //driver direk o window'a gecer
-        return driver;
+     //bu methodla istenilen kadar whd verilse bile, icinden hedefSayfaTitle'ini bulup,
+     //driver direk o window'a gecer.
 
     }
 

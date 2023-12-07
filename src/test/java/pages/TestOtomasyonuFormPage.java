@@ -17,7 +17,7 @@ public class TestOtomasyonuFormPage {
     }
 
     @FindBy(xpath = "//select[@class='form-control']")
-    public List<WebElement> dropdownMenuElementleriList;
+    public List<WebElement> dropdownMenuElementleriList;//gun,ay,yil elementlerini bu list'e atadik.
 
     @FindBy(id="gridCheck4")
     public WebElement carpintiCheckboxKutusu;

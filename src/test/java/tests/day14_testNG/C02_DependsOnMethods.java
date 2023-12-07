@@ -7,7 +7,7 @@ public class C02_DependsOnMethods {
     /*
         -dependsOnMethods oncelik sirasina karismaz.
 
-        1)Eger sirasi gelen bir test dependsOnMethods ile baska bir method'a bagli ise
+        1)Eger sirasi gelen bir test, dependsOnMethods ile baska bir method'a bagli ise
         once bagli olunan testin calisip, PASSED olmasini kontrol eder.
 
         2)Bagli olunan test calismazsa veya calisir ama FAILED olursa
