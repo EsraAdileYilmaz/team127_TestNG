@@ -11,15 +11,7 @@ import java.time.Duration;
 
 public class Driver {
 
-    private Driver (){
 
-        //PageObjectModel(POM)'de Driver class'indaki getDriver(),closeDriver() ve
-        //quitDriver() methodlarinin static yolla kullanilmasi ongorulmustur.
-        //Obje olusturma ile bu method'larin kullanilmamasi
-        //veya obje olusturularak farkli uygulamalarin
-        //POM icinde kullanilmasini engellemek icin Singleton Pattern tercih edilmistir.
-        //yani=> private Driver (){} gorunur constructor'i private yaparak bunu elde ettik.
-    }
 
     /*
 
@@ -34,8 +26,16 @@ public class Driver {
       sonraki kullanimlarda atanmis degeri kullansin istiyoruz.
       */
 
+    private Driver (){
 
-    static WebDriver driver;
+        //PageObjectModel(POM)'de Driver class'indaki getDriver(),closeDriver() ve
+        //quitDriver() methodlarinin static yolla kullanilmasi ongorulmustur.
+        //Obje olusturma ile bu method'larin kullanilmamasi
+        //veya obje olusturularak farkli uygulamalarin
+        //POM icinde kullanilmasini engellemek icin Singleton Pattern tercih edilmistir.
+        //yani=> private Driver (){} gorunur constructor'i private yaparak bunu elde ettik.
+    }
+    static WebDriver driver;//null
     public static WebDriver getDriver(){
 
         String browser=ConfigReader.getProperty("browser");
@@ -85,8 +85,5 @@ public class Driver {
             driver = null;
         }
     }
-
-
-
 
 }
