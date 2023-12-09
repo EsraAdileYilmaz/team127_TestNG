@@ -21,15 +21,15 @@ public class C06_DropdownTesti {
        //	1.Dogum tarihi gun seçeneğinden index kullanarak 5’i secin
        //hazir locateler icin, locatelerin icinde bulundugu class'tan bir obje olusturmamiz lazim
        TestOtomasyonuFormPage testOtomasyonuFormPage=new TestOtomasyonuFormPage();//class icinde 1 kez olusturmak yeterli oluyor
-       Select selectGun=new Select(testOtomasyonuFormPage.dropdownMenuElementleriList.get(0));//listedeki ilk elementi getir
+       Select selectGun=new Select(testOtomasyonuFormPage.dropdownMenuElementleriList.get(0));//listedeki ilk elementi(gun ) getir
        selectGun.selectByIndex(5);
 
        //	2. Dogum tarihi ay seçeneğinden value kullanarak Nisan’i secin
-       Select selectAy=new Select(testOtomasyonuFormPage.dropdownMenuElementleriList.get(1));//listedeki ikinci elementi getir
+       Select selectAy=new Select(testOtomasyonuFormPage.dropdownMenuElementleriList.get(1));//listedeki ikinci elementi(ay) getir
        selectAy.selectByValue("nisan");
 
        //	3. Dogum tarihi yil seçeneğinden visible text kullanarak 1990’i secin
-       Select selectYil=new Select(testOtomasyonuFormPage.dropdownMenuElementleriList.get(2));
+       Select selectYil=new Select(testOtomasyonuFormPage.dropdownMenuElementleriList.get(2));//listedeki ucuncu elementi(yil) getir
        selectYil.selectByVisibleText("1990");
 
 

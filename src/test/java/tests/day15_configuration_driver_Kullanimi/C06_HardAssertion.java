@@ -41,11 +41,12 @@ public class C06_HardAssertion {
       int bulunanSonucSayisi= testOtomasyonuPage.bulunanUrunElementleriList.size();
       Assert.assertTrue(bulunanSonucSayisi > 0 );
 
-      // Nutella aratip, urun bulundugunu test edin
+
+      // Nutella aratip, urun bulunmadigini test edin
       testOtomasyonuPage.aramaKutusu.clear();
       testOtomasyonuPage.aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
       bulunanSonucSayisi= testOtomasyonuPage.bulunanUrunElementleriList.size();
-      Assert.assertTrue(bulunanSonucSayisi > 0 );
+      Assert.assertTrue(bulunanSonucSayisi == 0 );
 
 
       // sayfayi kapatin
