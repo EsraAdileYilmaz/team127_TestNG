@@ -56,4 +56,18 @@ public class TestOtomasyonuPage {
     @FindBy(xpath = "//span[text()='Logout']")
     public WebElement logoutButonu;
 
+    @FindBy(xpath = "(//a[text()='Electronics'])[3]")
+    public WebElement electronicsLinki;
+
+    @FindBy(xpath = "//*[@*='form-control minPrice']")
+    public WebElement minLinki;
+
+    @FindBy(xpath = "//*[@*='form-control maxPrice']")
+    public WebElement maxLinki;
+
+    @FindBy(xpath = "//*[@*='price-range-button']")
+    public WebElement filterPriceButton;
+
+
+
 }

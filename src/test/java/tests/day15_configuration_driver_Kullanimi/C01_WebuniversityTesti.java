@@ -35,7 +35,7 @@ public class C01_WebuniversityTesti {
         WebuniversityPage webuniversityPage=new WebuniversityPage();
         JavascriptExecutor javascriptExecutor= (JavascriptExecutor) Driver.getDriver();
         javascriptExecutor.executeScript("arguments[0].scrollIntoViewIfNeeded(true);",webuniversityPage.loginPortalLinki);
-        //login portal linki gorununceye kadar ihtiyac olursa sayfayi asagi indir
+        //login portal linki gorununceye kadar ihtiyac olursa sayfayi asagi indir.
 
         //3."Login Portal" a tiklayin
         webuniversityPage.loginPortalLinki.click();

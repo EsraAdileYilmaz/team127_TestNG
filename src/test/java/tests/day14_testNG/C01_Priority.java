@@ -13,8 +13,6 @@ public class C01_Priority {
         - priority degeri kucuk olan once calisir.
         - priority degeri ayni olanlar varsa, ayni olanlar natural order'a gore calisir.
         - herhangi bir method'a priority atamazsak, priority degeri default olarak 0 olur.
-
-
      */
 
 

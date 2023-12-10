@@ -23,8 +23,8 @@ public class C06_HardAssertion {
       Assert.assertTrue(actualTitle.contains(expectedTitleIcerik));
 
 
-      // url'in https://www.testotomasyonu.com/ oldugunu test edin
-      String expectedUrl="https://www.testotomasyonu.com/";
+      // url'in https://testotomasyonu.com/ oldugunu test edin.
+      String expectedUrl="https://testotomasyonu.com/";
       String actualUrl=Driver.getDriver().getCurrentUrl();
       Assert.assertEquals(actualUrl,expectedUrl);
 
