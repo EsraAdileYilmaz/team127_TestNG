@@ -74,6 +74,7 @@ public class Driver {
 
         driver.close();
         if(driver != null){
+
             driver = null;
 
         }
@@ -83,6 +84,7 @@ public class Driver {
 
         driver.quit();
         if(driver != null){
+
             driver = null;
 
         }

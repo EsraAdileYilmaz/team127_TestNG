@@ -22,18 +22,14 @@
             <package name="tests.day14_testNG"></package>
             <package name="tests.day16_softAssertion_xmlFiles"></package>
         </packages>
-
-
     </test>
+
+
     <test name="paralel 2.browser">
         <packages>
             <package name="tests.day15_configuration_driver_Kullanimi"></package>
         </packages>
-
     </test>
-
-
-
 
 
 </suite>
