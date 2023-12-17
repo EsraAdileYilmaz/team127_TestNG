@@ -33,7 +33,7 @@ public class Driver {
         //Obje olusturma ile bu method'larin kullanilmamasi
         //veya obje olusturularak farkli uygulamalarin
         //POM icinde kullanilmasini engellemek icin Singleton Pattern tercih edilmistir.
-        //yani=> private Driver (){} gorunur constructor'i private yaparak bunu elde ettik.
+        //yani=> private Driver (){} gorunur constructor'i private yaparak obje olusumunu engelledik.
     }
     static WebDriver driver;//null
     public static WebDriver getDriver(){
