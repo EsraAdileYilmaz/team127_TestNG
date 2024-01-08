@@ -6,7 +6,8 @@
     1- Basa yazdigimiz satir=> <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
        tum .xml dosyalarimizda olmalidir.
        Bu satir bu .xml dosyasinda yazdigimiz kodlarin
-       TestNG ile hazirlanan test method'lari, class'lari veya package'larini calistiracaktir
+       TestNG ile hazirlanan test method'larini, class'larini veya package'larini calistiracaktir.
+
     2- Hangi method/class/package'larin calisacagini
        test hiyerarsisine uygun olarak
        .xml dosyamizda yazmaliyiz.
@@ -21,9 +22,10 @@
        Suite : bir veya birden fazla test icerir
        Test : bir amac icin bir araya getirilen
               test method/class/package'larindan olusan
-              ve tek seferde calistirabilecegimiz yapidir
+              ve tek seferde calistirabilecegimiz yapidir.
               Orn : smoke test(gunluk testler), E2E(uctan uca testler) , regression(tum testlerin calismasi)
-       package - class - test method'lari ayni seviyededir.
+
+      ** package - class - test method'lari ayni seviyededir.
 
  -->
 

@@ -31,7 +31,7 @@ public class C02_configurationPropertiesKullanimi {
 
 
         // ilk urune tiklayin
-        testOtomasyonuPage.bulunanUrunElementleriList.get(0).click();//0. index=1.urun
+        testOtomasyonuPage.bulunanUrunElementleriList.get(0).click();//0. index=1.urun (listenin 0.indexindeki urun)
 
 
         // acilan sayfada urun isminin case sensitive olmadan

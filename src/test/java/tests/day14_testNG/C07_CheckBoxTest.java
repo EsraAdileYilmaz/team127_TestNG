@@ -28,7 +28,7 @@ public class C07_CheckBoxTest {
 
 
         //	d. Seker ve Epilepsi checkbox’larininin seçili olmadigini test edin
-        //burda Seker ve Epilepsi checkbox’larininin oldugu sayfa gorunmedigi icin
+        //1-Burda Seker ve Epilepsi checkbox’larininin oldugu sayfa gorunmedigi icin
         // sayfayi asagi kaydirmam lazim
 
         Actions actions=new Actions(Driver.getDriver());

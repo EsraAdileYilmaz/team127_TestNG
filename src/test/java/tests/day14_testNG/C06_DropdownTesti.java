@@ -20,8 +20,8 @@ public class C06_DropdownTesti {
 
        //	1.Dogum tarihi gun seçeneğinden index kullanarak 5’i secin
        //hazir locateler icin, locatelerin icinde bulundugu class'tan bir obje olusturmamiz lazim
-       TestOtomasyonuFormPage testOtomasyonuFormPage=new TestOtomasyonuFormPage();//class icinde 1 kez olusturmak yeterli oluyor
-       Select selectGun=new Select(testOtomasyonuFormPage.dropdownMenuElementleriList.get(0));//listedeki ilk elementi(gun ) getir
+       TestOtomasyonuFormPage testOtomasyonuFormPage=new TestOtomasyonuFormPage();//Objeyi class icinde 1 kez olusturmak yeterli oluyor
+       Select selectGun=new Select(testOtomasyonuFormPage.dropdownMenuElementleriList.get(0));//listedeki ilk elementi(gun) getir
        selectGun.selectByIndex(5);
 
        //	2. Dogum tarihi ay seçeneğinden value kullanarak Nisan’i secin

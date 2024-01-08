@@ -29,6 +29,7 @@ public class C02_SoftAssertion {
         softAssert.assertEquals(actualUrl,expectedUrl,"Anasayfada degiliz");
 
         // 3. Sign in butonuna basin
+        ReusableMethods.bekle(1);
         ZerowebappPage zerowebappPage=new ZerowebappPage();
         zerowebappPage.signInLinki.click();
 

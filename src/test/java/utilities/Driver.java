@@ -56,6 +56,29 @@ public class Driver {
                     WebDriverManager.edgedriver().setup();
                     driver =new EdgeDriver();
                     break;
+                //case "cloud" :
+                //                    String username = PropManager.getProperties(env, "cloud_username");
+                //                    String accesskey = PropManager.getProperties(env, "cloud_accesskey");
+                //                    DesiredCapabilities capability = new DesiredCapabilities();
+                //                    capability.setCapability(CapabilityType.BROWSER_NAME, browser);
+                //                    capability.setCapability(CapabilityType.PLATFORM_NAME, PropManager.getProperties(env, "platform_name"));
+                //                    capability.setCapability(CapabilityType.BROWSER_VERSION, PropManager.getProperties(env, "browser_version") );
+                //
+                //                    capability.setCapability("build", "Cucumber Sample Build");
+                //                    capability.setCapability("network", true);
+                //                    capability.setCapability("video", true);
+                //                    capability.setCapability("console", true);
+                //                    capability.setCapability("visual", true);
+                //                    String gridURL = "https://" + username + ":" + accesskey + "@<your cloud provider>/wd/hub";
+                ////                    RemoteWebDriver connection = new RemoteWebDriver(new URL(gridURL), capability);
+                ////                    log.info(String.valueOf(capability));
+                ////                    log.info(String.valueOf(connection.getSessionId()));
+                //                    break;
+                //                default:
+                //                    log.error("No such a browser type");
+                //                    break;
+                //            }
+
                 default:
                     WebDriverManager.chromedriver().setup();
                     driver=new ChromeDriver();
@@ -74,7 +97,6 @@ public class Driver {
 
         driver.close();
         if(driver != null){
-
             driver = null;
 
         }
@@ -84,7 +106,6 @@ public class Driver {
 
         driver.quit();
         if(driver != null){
-
             driver = null;
 
         }

@@ -5,7 +5,7 @@
     <!--
         Paralel calistirma icin suite tag'ina 2 yeni attribute ekleriz.
         1- thread-count : ayni anda kac browser'in beraber calisacagi gosterir
-        2- parallel : gorev bolusumunun hangi seviyede olacagi belirlenir
+        2- parallel : gorev bolusumunun hangi seviyede olacagi belirlenir.
                       gorev paylasimi sirasinda;
                       - yukun mumkun oldugunca browser'lara esit dagitilmasi
                       - baglantili method'larin ayni browser tarafindan calistirilmasi

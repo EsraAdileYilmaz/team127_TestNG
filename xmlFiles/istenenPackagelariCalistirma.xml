@@ -6,7 +6,7 @@
         
        <packages>
          <package name="tests.day15_configuration_driver_Kullanimi"></package>
-         <!--tum testleri calistirmak isterseniz package ismi olarak=> package name="tests.*" yazmaniz yeterlidir-->
+         <!--Tum testleri calistirmak isterseniz package ismi olarak=> package name="tests.*" yazmaniz yeterlidir-->
            
        </packages> 
         

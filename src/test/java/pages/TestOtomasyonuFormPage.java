@@ -12,7 +12,7 @@ public class TestOtomasyonuFormPage {
 
     //1.adim driver'imizi bu sayfaya tanitmamiz lazim.bunun icin constructor'imizi gorunur hale getirmemiz lazim.
     public TestOtomasyonuFormPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(),this);//bu sayfada driver'i tanimla
         //bu kodla driver'imizi bu class'ta tanitmis olduk
     }
 

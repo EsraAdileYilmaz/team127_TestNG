@@ -38,7 +38,8 @@ public class C01_RaporluTestOlusturma extends TestBaseRapor {
      //acilan urun sayfasinda urun isminin case sensitive olmadan belirlenen arama kelimesini icerdigini test edin
         String actualUrunIsmiKucukHarf=testOtomasyonuPage
                                        .urunSayfasindakiIlkUrunIsimElementi
-                                       .getText().toLowerCase();
+                                       .getText()
+                                       .toLowerCase();
         assertTrue(actualUrunIsmiKucukHarf.contains(ConfigReader.getProperty("toAranacakKelime")));
         extentTest.pass("Acilan urun sayfasinda urun isminin case sensitive olmadan belirlenen arama kelimesini icerdigini test eder");
 

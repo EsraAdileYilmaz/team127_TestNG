@@ -81,7 +81,7 @@ public class C01_SoftAssertion {
         bulunanSonucSayisi=testOtomasyonuPage.bulunanUrunElementleriList.size();
         softAssert.assertTrue(bulunanSonucSayisi == 0,"Arama sonucunda nutella bulundu");
 
-        softAssert.assertAll();//3.adim rapor isteme
+        softAssert.assertAll();//3.adim rapor isteme yani passed ve failed olanlarin hepsini goster
 
         // sayfayi kapatin
         Driver.quitDriver();

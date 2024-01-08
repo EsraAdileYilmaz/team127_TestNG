@@ -43,8 +43,8 @@ public class C02 extends TestBaseCross {
         selectYil.selectByVisibleText("1990");
         //	4. Secilen değerleri konsolda yazdirin
         System.out.println(selectGun.getFirstSelectedOption().getText() + "/" +
-                selectAy.getFirstSelectedOption().getText()+"/"+
-                selectYil.getFirstSelectedOption().getText());
+                           selectAy.getFirstSelectedOption().getText()+"/"+
+                           selectYil.getFirstSelectedOption().getText());
         //	5. Ay dropdown menüdeki tum değerleri(value) yazdırın
 
         List<String> aylarListesi = ReusableMethods.stringListeDonustur(selectAy.getOptions());
