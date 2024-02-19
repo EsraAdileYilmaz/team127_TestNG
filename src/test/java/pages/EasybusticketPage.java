@@ -29,7 +29,9 @@ public class EasybusticketPage {
     @FindBy(xpath = "//button[text()='Sign Up']")
     public WebElement buttonOfSignUp;
 
-
+    @FindBy(xpath = "//*[@class='iziToast-wrapper iziToast-wrapper-topRight']")
+    public WebElement alert;
+//
 
 
 
