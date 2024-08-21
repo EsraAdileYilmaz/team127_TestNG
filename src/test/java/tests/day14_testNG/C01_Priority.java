@@ -17,20 +17,20 @@ public class C01_Priority {
 
 
     @Test
-    public void testOtomasyonuTesti(){
+    public void testOtomasyonuTesti() {
 
         System.out.println("Test Otomasyonu testi PASSED");
     }
 
     @Test(priority = -10)
-    public void amazonTesti(){
+    public void amazonTesti() {
 
         System.out.println("Amazon testi PASSED");
     }
 
 
     @Test(priority = 5)
-    public void wiseQuarterTesti(){
+    public void wiseQuarterTesti() {
 
         System.out.println("Wise Quarter testi PASSED");
     }

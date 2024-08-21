@@ -18,8 +18,6 @@
     <dependencies>
 
 
-
-
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -28,14 +26,12 @@
         </dependency>
 
 
-
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.5.3</version>
         </dependency>
-
 
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -47,17 +43,12 @@
         </dependency>
 
 
-
-
         <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
             <version>1.0.2</version>
         </dependency>
-
-
-
 
 
         <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
@@ -68,17 +59,7 @@
         </dependency>
 
 
-
-
-
-
-
-
-
-
-
     </dependencies>
-
 
 
 </project>

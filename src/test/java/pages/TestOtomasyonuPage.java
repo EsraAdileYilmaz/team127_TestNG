@@ -15,10 +15,10 @@ public class TestOtomasyonuPage {
 
         TestNG'de locate etmek icin;
         @FindBy( "locate sekli") notasyonu ve
-        public WebElement isim;  kullanilir.
+        public WebElement isim;  kullanilir.Veya
         public List<WebElement> isim; kullanilir
 
-        initElements(); elementlere ilk deger atamasini yap
+        initElements(); elementlere ilk deger atamasini yap.Yani initialization yapar
      */
 
     //1.adim driver'imizi bu sayfaya tanitmamiz lazim.bunun icin constructor'imizi gorunur hale getirmemiz lazim.
@@ -27,7 +27,6 @@ public class TestOtomasyonuPage {
         //bu kodla sunu demis olduk.driver'imiz bu class'ta tanimli olsun.
     }
 
-
     @FindBy(id="global-search")
     public WebElement aramaKutusu;
 
@@ -35,7 +34,7 @@ public class TestOtomasyonuPage {
     public WebElement sonucYaziElementi;
 
     @FindBy(xpath = "//div[@class='product-box my-2  py-1']")
-    public List<WebElement> bulunanUrunElementleriList;//phone yazinca gelen urun listesi
+    public List<WebElement> bulunanUrunElementleriList;//Bu locate'le bize donen birden fazla webElement(urun) var
 
 
     @FindBy(xpath ="//div[@class=' heading-sm mb-4']" )

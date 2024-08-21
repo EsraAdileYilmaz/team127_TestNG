@@ -10,14 +10,13 @@ import utilities.ReusableMethods;
 public class C05_PageClassKullanimi {
 
     @Test
-    public void aramaTesti(){
-
+    public void aramaTesti() {
 
         // testotomasyonu anasayfaya gidin
         Driver.getDriver().get("https://www.testotomasyonu.com");
 
         // phone icin arama yapin
-        TestOtomasyonuPage testOtomasyonuPage=new TestOtomasyonuPage();//bu class'tan obje olusturduk cunku locate'ler bu classin icinde
+        TestOtomasyonuPage testOtomasyonuPage = new TestOtomasyonuPage();//bu class'tan obje olusturduk cunku locate'ler bu classin icinde
         testOtomasyonuPage.aramaKutusu.sendKeys("phone" + Keys.ENTER);
 
         // bulunan sonuc sayisinin 1'den cok oldugunu test edin

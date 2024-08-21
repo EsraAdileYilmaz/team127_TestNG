@@ -11,10 +11,7 @@ import java.time.Duration;
 
 public class Driver {
 
-
-
     /*
-
       Cagrildigi yere bir WebDriver objesi dondurecek
       getDriver() methodu olusturalim.
 
@@ -26,7 +23,7 @@ public class Driver {
       sonraki kullanimlarda atanmis degeri kullansin istiyoruz.
       */
 
-    private Driver (){
+    private Driver() {
 
         //PageObjectModel(POM)'de Driver class'indaki getDriver(),closeDriver() ve
         //quitDriver() methodlarinin static yolla kullanilmasi ongorulmustur.
@@ -35,53 +32,32 @@ public class Driver {
         //POM icinde kullanilmasini engellemek icin Singleton Pattern tercih edilmistir.
         //yani=> private Driver (){} gorunur constructor'i private yaparak obje olusumunu engelledik.
     }
+
     static WebDriver driver;//null
-    public static WebDriver getDriver(){
 
-        String browser=ConfigReader.getProperty("browser");
+    public static WebDriver getDriver() {
 
-        if(driver == null){
+        String browser = ConfigReader.getProperty("browser");
 
-            switch (browser){
+        if (driver == null) {
 
-                case "firefox" :
+            switch (browser) {
+
+                case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driver =new FirefoxDriver();
+                    driver = new FirefoxDriver();
                     break;
-                case "safari" :
+                case "safari":
                     WebDriverManager.safaridriver().setup();
-                    driver =new SafariDriver();
+                    driver = new SafariDriver();
                     break;
-                case "edge" :
+                case "edge":
                     WebDriverManager.edgedriver().setup();
-                    driver =new EdgeDriver();
+                    driver = new EdgeDriver();
                     break;
-                //case "cloud" :
-                //                    String username = PropManager.getProperties(env, "cloud_username");
-                //                    String accesskey = PropManager.getProperties(env, "cloud_accesskey");
-                //                    DesiredCapabilities capability = new DesiredCapabilities();
-                //                    capability.setCapability(CapabilityType.BROWSER_NAME, browser);
-                //                    capability.setCapability(CapabilityType.PLATFORM_NAME, PropManager.getProperties(env, "platform_name"));
-                //                    capability.setCapability(CapabilityType.BROWSER_VERSION, PropManager.getProperties(env, "browser_version") );
-                //
-                //                    capability.setCapability("build", "Cucumber Sample Build");
-                //                    capability.setCapability("network", true);
-                //                    capability.setCapability("video", true);
-                //                    capability.setCapability("console", true);
-                //                    capability.setCapability("visual", true);
-                //                    String gridURL = "https://" + username + ":" + accesskey + "@<your cloud provider>/wd/hub";
-                ////                    RemoteWebDriver connection = new RemoteWebDriver(new URL(gridURL), capability);
-                ////                    log.info(String.valueOf(capability));
-                ////                    log.info(String.valueOf(connection.getSessionId()));
-                //                    break;
-                //                default:
-                //                    log.error("No such a browser type");
-                //                    break;
-                //            }
-
                 default:
                     WebDriverManager.chromedriver().setup();
-                    driver=new ChromeDriver();
+                    driver = new ChromeDriver();
 
             }
 
@@ -93,19 +69,19 @@ public class Driver {
         return driver;
     }
 
-    public static void closeDriver(){
+    public static void closeDriver() {
 
         driver.close();
-        if(driver != null){
+        if (driver != null) {
             driver = null;
 
         }
     }
 
-    public static void quitDriver(){
+    public static void quitDriver() {
 
         driver.quit();
-        if(driver != null){
+        if (driver != null) {
             driver = null;
 
         }

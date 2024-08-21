@@ -11,38 +11,26 @@ public class TestOtomasyonuFormPage {
 
 
     //1.adim driver'imizi bu sayfaya tanitmamiz lazim.bunun icin constructor'imizi gorunur hale getirmemiz lazim.
-    public TestOtomasyonuFormPage(){
-        PageFactory.initElements(Driver.getDriver(),this);//bu sayfada driver'i tanimla
+    public TestOtomasyonuFormPage() {
+        PageFactory.initElements(Driver.getDriver(), this);//bu sayfada driver'i tanimla
         //bu kodla driver'imizi bu class'ta tanitmis olduk
     }
 
     @FindBy(xpath = "//select[@class='form-control']")
     public List<WebElement> dropdownMenuElementleriList;//bu locate'le gun,ay,yil elementlerini bu list'e atadik.
+    //0.indexte gun, 1.indexte ay, 2.indexte yil elementi vardir
 
-    @FindBy(id="gridCheck4")
+    @FindBy(id = "gridCheck4")
     public WebElement carpintiCheckboxKutusu;
 
-    @FindBy(id="gridCheck5")
+    @FindBy(id = "gridCheck5")
     public WebElement sirtAgrisiCheckboxKutusu;
 
-    @FindBy(id="hastalikCheck2")
+    @FindBy(id = "hastalikCheck2")
     public WebElement sekerCheckboxKutusu;
 
-
-    @FindBy(id="hastalikCheck7")
+    @FindBy(id = "hastalikCheck7")
     public WebElement epilepsiCheckboxKutusu;
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

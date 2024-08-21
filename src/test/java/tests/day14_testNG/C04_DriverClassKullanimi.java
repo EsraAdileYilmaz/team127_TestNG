@@ -21,7 +21,7 @@ public class C04_DriverClassKullanimi {
         Driver.getDriver().get("https://www.testotomasyonu.com");
 
         // arama kutusuna phone yazip aratalim
-        WebElement searchBox=Driver.getDriver().findElement(By.id("global-search"));
+        WebElement searchBox = Driver.getDriver().findElement(By.id("global-search"));
         searchBox.sendKeys("phone" + Keys.ENTER);
 
         // arama sonuclarini yazdirin
@@ -30,7 +30,6 @@ public class C04_DriverClassKullanimi {
 
 
         Thread.sleep(3000);
-
 
         Driver.quitDriver();
 

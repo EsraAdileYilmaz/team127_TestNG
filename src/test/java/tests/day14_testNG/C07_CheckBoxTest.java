@@ -11,13 +11,13 @@ import utilities.ReusableMethods;
 public class C07_CheckBoxTest {
 
     @Test
-    public void test01(){
+    public void test01() {
 
         //	a. Verilen web sayfasına gidin.  https://testotomasyonu.com/form
         Driver.getDriver().get("https://testotomasyonu.com/form");
 
         //	b. Sirt Agrisi ve Carpinti checkbox’larini secin
-        TestOtomasyonuFormPage testOtomasyonuFormPage=new TestOtomasyonuFormPage();
+        TestOtomasyonuFormPage testOtomasyonuFormPage = new TestOtomasyonuFormPage();
         testOtomasyonuFormPage.sirtAgrisiCheckboxKutusu.click();
         testOtomasyonuFormPage.carpintiCheckboxKutusu.click();
 
@@ -31,7 +31,7 @@ public class C07_CheckBoxTest {
         //1-Burda Seker ve Epilepsi checkbox’larininin oldugu sayfa gorunmedigi icin
         // sayfayi asagi kaydirmam lazim
 
-        Actions actions=new Actions(Driver.getDriver());
+        Actions actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         ReusableMethods.bekle(2);
 
@@ -39,7 +39,6 @@ public class C07_CheckBoxTest {
         Assert.assertFalse(testOtomasyonuFormPage.epilepsiCheckboxKutusu.isSelected());
 
         Driver.quitDriver();
-
 
 
     }

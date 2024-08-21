@@ -23,7 +23,7 @@ public class ConfigReader {
         try {
             FileInputStream fis= new FileInputStream(dosyaYolu);
             properties= new Properties();
-            properties.load(fis);//bu satirda properties ustundeki tum bilgiler fis dosyasina yuklenmis olacak
+            properties.load(fis);//bu satirda configuration.properties ustundeki tum bilgiler fis dosyasina yuklenmis olacak
             //properties uzerine yuklenen degerleri key=value seklinde tutar.
             //biz cagirmak icin key'ini yazariz oda bize value'sunu dondurur.
 

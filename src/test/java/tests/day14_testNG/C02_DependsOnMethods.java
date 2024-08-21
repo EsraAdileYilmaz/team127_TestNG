@@ -21,38 +21,25 @@ public class C02_DependsOnMethods {
      */
 
     @Test(dependsOnMethods = "testOtomasyonuTesti")
-    public void amazonTesti(){
+    public void amazonTesti() {
 
         System.out.println("Amazon testi PASSED");
         //bu methodda amazonTestinin calismasi testOtomasyonuTesti'nin calismasina baglidir.
-        //once testOtomasyonuTesti calisir ve PASSED olursa amazonTesti calisir.
-        //FAILED olursa amazonTesti ignore edilir.
+        //once testOtomasyonuTesti() calisir ve PASSED olursa amazonTesti() calisir.
+        //FAILED olursa amazonTesti() ignore edilir.CALISMAZ
     }
 
     @Test
-    public void testOtomasyonuTesti(){
+    public void testOtomasyonuTesti() {
         //Assert.assertTrue(false);
         System.out.println("Test Otomasyonu testi PASSED");
     }
 
-    @Test (dependsOnMethods = "amazonTesti")
-    public void wiseQuarterTesti(){
+    @Test(dependsOnMethods = "amazonTesti")
+    public void wiseQuarterTesti() {
 
         System.out.println("Wise Quarter testi PASSED");
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

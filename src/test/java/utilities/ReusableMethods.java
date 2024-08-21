@@ -26,7 +26,8 @@ public class ReusableMethods {
          stringlerListesi.add(each.getText());
         }
         return stringlerListesi;
-    }
+    }//WebElementlerden olusan listeyi Stringlerden olusan listeye cevirme metodu
+    //List<String> baslikElementleri =ReusableMethods.stringListeDonustur(baslikElementleriListi);
 
 
 
@@ -57,10 +58,9 @@ public class ReusableMethods {
                break;//title'lar esit oldugunda loop'u durdur.birak.
             }
         }
-     //bu methodla istenilen kadar whd verilse bile, icinden hedefSayfaTitle'ini bulup,
-     //driver direk o window'a gecer.
 
-    }
+    }//Bu methodla istenilen kadar whd verilse bile icinden hedefSayfaTitle'ini bulup
+    //driver direk o window'a gecer. driver = ReusableMethods.titleIleSayfaDegistir(driver,"yenititle") atama yapariz
 
 
 
@@ -78,7 +78,8 @@ public class ReusableMethods {
      //bu methodla sadece 2 whd degeri uzerinden secim yapilabilir
         return null; // bu satirin hic calismayacagini biliyoruz
         // sadece javanin endiselerini gidermek icin yazdik.
-    }
+    }//Bu methodla sadece 2 whd degeri uzerinden secim yapilabilir
+    //String ikinciWhd = ReusableMethods.ilkSayfaWhdIleIkinciSayfaWhdBul(driver, ilkSayfaWhd); yapilarak kullanilir
 
 
 
@@ -115,7 +116,7 @@ public class ReusableMethods {
         }
 
         ReusableMethods.bekle(5);
-    }
+    }//tum sayfanin screenshot'ini alip target'in altina atar
 
 
 
@@ -159,7 +160,7 @@ public class ReusableMethods {
 
         ReusableMethods.bekle(5);
 
-    }
+    }//tum sayfanin screenshot'ini alip target'in altina atar
 
 
 
@@ -189,7 +190,8 @@ public class ReusableMethods {
             System.out.println("Screenshot kopyalanamadi");
             throw new RuntimeException(e);
         }
-    }
+    }//Locate'i alinan webelementin screenshot'ini alip target'in altina atar
+
 
     public static String getScreenshot(String name) throws IOException {
         // naming the screenshot with the current date to avoid duplication
