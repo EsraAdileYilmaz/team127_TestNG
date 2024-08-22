@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class C05_SingletonPattern {
 
     @Test
-    public void test01(){
+    public void test01() {
 
         /*
         SINGLETON pattern bir class'dan
@@ -25,17 +25,6 @@ public class C05_SingletonPattern {
         driver.closeDriver();
 
          */
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

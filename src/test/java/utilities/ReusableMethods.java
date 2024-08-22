@@ -60,7 +60,7 @@ public class ReusableMethods {
         }
 
     }//Bu methodla istenilen kadar whd verilse bile icinden hedefSayfaTitle'ini bulup
-    //driver direk o window'a gecer. driver = ReusableMethods.titleIleSayfaDegistir(driver,"yenititle") atama yapariz
+    //driver direk o window'a gecer.
 
 
 

@@ -10,14 +10,14 @@ import utilities.ReusableMethods;
 public class C03_PozitifLoginTesti {
 
 
-    @Test(groups = {"smoke","regression"})
-    public void pozitifLoginTesti(){
+    @Test(groups = {"smoke", "regression"})
+    public void pozitifLoginTesti() {
 
         // 1- https://www.testotomasyonu.com/ anasayfasina gidin
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
 
         // 2- account linkine basin
-        TestOtomasyonuPage testOtomasyonuPage=new TestOtomasyonuPage();
+        TestOtomasyonuPage testOtomasyonuPage = new TestOtomasyonuPage();
         testOtomasyonuPage.accountButonu.click();
 
         // 3- Kullanici email'i olarak gecerliEmail girin
@@ -33,30 +33,16 @@ public class C03_PozitifLoginTesti {
 
 
         // 6- Basarili olarak giris yapilabildigini test edin
-        //siteye giris yapildiktan sonra herhengi birseyle test yapilabilir.
+        //Siteye giris yapildiktan sonra herhangi bir webelementle test yapilabilir.
         //or:logout tusunun gorunur olmasi ile
         Assert.assertTrue(testOtomasyonuPage.logoutButonu.isDisplayed());
-
 
         ReusableMethods.bekle(2);
 
         Driver.quitDriver();
 
 
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

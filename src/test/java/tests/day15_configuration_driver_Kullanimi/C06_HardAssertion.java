@@ -10,68 +10,49 @@ import utilities.ReusableMethods;
 
 public class C06_HardAssertion {
 
-  @Test
-  public void hardAssertionTesti(){
+    @Test
+    public void hardAssertionTesti() {
 
-      // testotomasyonu anasayfaya gidin
-      Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
-
-
-      // Title'in Test icerdigini test edin
-      String expectedTitleIcerik="Test";
-      String actualTitle=Driver.getDriver().getTitle();
-      Assert.assertTrue(actualTitle.contains(expectedTitleIcerik));
+        // testotomasyonu anasayfaya gidin
+        Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
 
 
-      // url'in https://testotomasyonu.com/ oldugunu test edin.
-      String expectedUrl="https://testotomasyonu.com/";
-      String actualUrl=Driver.getDriver().getCurrentUrl();
-      Assert.assertEquals(actualUrl,expectedUrl);
+        // Title'in Test icerdigini test edin
+        String expectedTitleIcerik = "Test";
+        String actualTitle = Driver.getDriver().getTitle();
+        Assert.assertTrue(actualTitle.contains(expectedTitleIcerik));
 
 
-      // arama kutusunun kullanilabilir durumda oldugunu test edin
-      TestOtomasyonuPage testOtomasyonuPage=new TestOtomasyonuPage();
-      Assert.assertTrue(testOtomasyonuPage.aramaKutusu.isEnabled());
+        // url'in https://testotomasyonu.com/ oldugunu test edin.
+        String expectedUrl = "https://testotomasyonu.com/";
+        String actualUrl = Driver.getDriver().getCurrentUrl();
+        Assert.assertEquals(actualUrl, expectedUrl);
 
 
-      // belirlenmis aranacak kelimeyi aratip urun bulundugunu test edin
-      ReusableMethods.bekle(2);
-      testOtomasyonuPage.aramaKutusu
-              .sendKeys(ConfigReader.getProperty("toAranacakKelime") + Keys.ENTER);
-      int bulunanSonucSayisi= testOtomasyonuPage.bulunanUrunElementleriList.size();
-      Assert.assertTrue(bulunanSonucSayisi > 0 );
+        // arama kutusunun kullanilabilir durumda oldugunu test edin
+        TestOtomasyonuPage testOtomasyonuPage = new TestOtomasyonuPage();
+        Assert.assertTrue(testOtomasyonuPage.aramaKutusu.isEnabled());
 
 
-      // Nutella aratip, urun bulunmadigini test edin
-      testOtomasyonuPage.aramaKutusu.clear();
-      testOtomasyonuPage.aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
-      bulunanSonucSayisi= testOtomasyonuPage.bulunanUrunElementleriList.size();
-      Assert.assertTrue(bulunanSonucSayisi == 0 );
+        // belirlenmis aranacak kelimeyi aratip urun bulundugunu test edin
+        ReusableMethods.bekle(2);
+        testOtomasyonuPage.aramaKutusu
+                .sendKeys(ConfigReader.getProperty("toAranacakKelime") + Keys.ENTER);
+        int bulunanSonucSayisi = testOtomasyonuPage.bulunanUrunElementleriList.size();
+        Assert.assertTrue(bulunanSonucSayisi > 0);
 
 
-      // sayfayi kapatin
-      Driver.quitDriver();
+        // Nutella aratip, urun bulunmadigini test edin
+        testOtomasyonuPage.aramaKutusu.clear();
+        testOtomasyonuPage.aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
+        bulunanSonucSayisi = testOtomasyonuPage.bulunanUrunElementleriList.size();
+        Assert.assertTrue(bulunanSonucSayisi == 0);
 
 
+        // sayfayi kapatin
+        Driver.quitDriver();
 
-
-
-
-
-
-
-
-
-  }
-
-
-
-
-
-
-
-
-
+    }
 
 
 }

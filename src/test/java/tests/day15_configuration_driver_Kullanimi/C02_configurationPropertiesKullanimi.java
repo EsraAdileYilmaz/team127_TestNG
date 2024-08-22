@@ -12,7 +12,7 @@ public class C02_configurationPropertiesKullanimi {
 
 
     @Test
-    public void aramaTesti(){
+    public void aramaTesti() {
 
         // test otomasyonu anasayfaya gidin
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
@@ -20,13 +20,13 @@ public class C02_configurationPropertiesKullanimi {
 
         // configuration.properties'de belirlenmis olan aranacak urunu aratin
         //1.Adim locate'leri almak icin locate'lerin bulundugu class'tan obje olustur
-        TestOtomasyonuPage testOtomasyonuPage=new TestOtomasyonuPage();
+        TestOtomasyonuPage testOtomasyonuPage = new TestOtomasyonuPage();
         testOtomasyonuPage.aramaKutusu.
                 sendKeys(ConfigReader.getProperty("toAranacakKelime") + Keys.ENTER);
 
 
         // arama sonucunda urun bulunabildigini test edin
-        int bulunanUrunSayisi=testOtomasyonuPage.bulunanUrunElementleriList.size();
+        int bulunanUrunSayisi = testOtomasyonuPage.bulunanUrunElementleriList.size();
         Assert.assertTrue(bulunanUrunSayisi > 0);
 
 
@@ -36,10 +36,10 @@ public class C02_configurationPropertiesKullanimi {
 
         // acilan sayfada urun isminin case sensitive olmadan
         // configuration.properties'de belirlenmis olan aranacak kelimeyi icerdigini test edin
-        String actualUrunIsmiKucukHarf=testOtomasyonuPage
-                                       .urunSayfasindakiIlkUrunIsimElementi
-                                       .getText()
-                                       .toLowerCase();
+        String actualUrunIsmiKucukHarf = testOtomasyonuPage
+                                        .urunSayfasindakiIlkUrunIsimElementi
+                                        .getText()
+                                        .toLowerCase();
         Assert.assertTrue(actualUrunIsmiKucukHarf.contains(ConfigReader.getProperty("toAranacakKelime")));
 
         ReusableMethods.bekle(1);

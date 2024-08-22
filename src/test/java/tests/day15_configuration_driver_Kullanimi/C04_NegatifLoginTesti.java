@@ -11,7 +11,7 @@ public class C04_NegatifLoginTesti {
 
     // 1- https://www.testotomasyonu.com/ anasayfasina gidin
     // 2- account linkine basin
-    // 3-  3 farkli test method’u olusturun.
+    // 3- 3 farkli test method’u olusturun.
     //	- gecerli email, gecersiz password
     //	- gecersiz email, gecerli password
     //	- gecersiz email, gecersiz password.
@@ -28,7 +28,7 @@ public class C04_NegatifLoginTesti {
         TestOtomasyonuPage testOtomasyonuPage=new TestOtomasyonuPage();
         testOtomasyonuPage.accountButonu.click();
 
-        // 3-  3 farkli test method’u olusturun.
+        // 3- 3 farkli test method’u olusturun.
         //	- gecerli email, gecersiz password
         testOtomasyonuPage.emailKutusu.sendKeys(ConfigReader.getProperty("toGecerliEmail"));
         testOtomasyonuPage.passwordKutusu.sendKeys(ConfigReader.getProperty("toGecersizPassword"));

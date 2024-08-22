@@ -5,34 +5,24 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-  public class WebuniversityPage {
+public class WebuniversityPage {
 
-     public WebuniversityPage(){
-
-    PageFactory.initElements(Driver.getDriver(),this);
-   }
-
+    public WebuniversityPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
     @FindBy(xpath = "//h1[text()='LOGIN PORTAL']")
     public WebElement loginPortalLinki;
 
 
     @FindBy(xpath = "//input[@id='text']")
-      public WebElement usernameKutusu;
+    public WebElement usernameKutusu;
 
     @FindBy(xpath = "//input[@id='password']")
-      public WebElement passwordKutusu;
+    public WebElement passwordKutusu;
 
     @FindBy(xpath = "//button[@id='login-button']")
-      public WebElement loginButonu;
-
-
-
-
-
-
-
-
+    public WebElement loginButonu;
 
 
 }

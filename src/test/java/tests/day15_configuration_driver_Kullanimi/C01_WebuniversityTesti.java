@@ -11,7 +11,7 @@ import utilities.ReusableMethods;
 public class C01_WebuniversityTesti {
 
     @Test
-    public void negatifLoginTesti(){
+    public void negatifLoginTesti() {
 
 
        /*
@@ -32,9 +32,9 @@ public class C01_WebuniversityTesti {
         Driver.getDriver().get("https://webdriveruniversity.com/");
 
         // 2.“Login Portal” a kadar asagi inin
-        WebuniversityPage webuniversityPage=new WebuniversityPage();
-        JavascriptExecutor javascriptExecutor= (JavascriptExecutor) Driver.getDriver();
-        javascriptExecutor.executeScript("arguments[0].scrollIntoViewIfNeeded(true);",webuniversityPage.loginPortalLinki);
+        WebuniversityPage webuniversityPage = new WebuniversityPage();
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) Driver.getDriver();
+        javascriptExecutor.executeScript("arguments[0].scrollIntoViewIfNeeded(true);", webuniversityPage.loginPortalLinki);
         //login portal linki gorununceye kadar ihtiyac olursa sayfayi asagi indir.
 
         //3."Login Portal" a tiklayin
@@ -44,7 +44,7 @@ public class C01_WebuniversityTesti {
         ReusableMethods.titleIleSayfaDegistir("WebDriver | Login Portal");
 
         //5."username" ve  "password" kutularina rastgele deger yazdirin
-        Faker faker=new Faker();//rastgele degerler elde edicez
+        Faker faker = new Faker();//rastgele degerler elde edicez
         webuniversityPage.usernameKutusu.sendKeys(faker.name().username());
         webuniversityPage.passwordKutusu.sendKeys(faker.internet().password());
 
@@ -52,22 +52,21 @@ public class C01_WebuniversityTesti {
         webuniversityPage.loginButonu.click();
 
         //7.Popup'ta cikan yazinin "validation failed" oldugunu test edin
-        String expectedAlertYazisi="validation failed";
-        String actualAlertYazisi=Driver.getDriver().switchTo().alert().getText();
-        Assert.assertEquals(actualAlertYazisi,expectedAlertYazisi);
+        String expectedAlertYazisi = "validation failed";
+        String actualAlertYazisi = Driver.getDriver().switchTo().alert().getText();
+        Assert.assertEquals(actualAlertYazisi, expectedAlertYazisi);
 
         //8.Ok diyerek Popup'i kapatin
         Driver.getDriver().switchTo().alert().accept();
 
         //9.Ilk sayfaya geri donun
-        String ilkSayfaTitle="WebDriverUniversity.com";
+        String ilkSayfaTitle = "WebDriverUniversity.com";
         ReusableMethods.titleIleSayfaDegistir(ilkSayfaTitle);
 
         //10.Ilk sayfaya donuldugunu test edin
-        String actualTitle=Driver.getDriver().getTitle();
-        ilkSayfaTitle="WebDriverUniversity.com";
-        Assert.assertEquals(actualTitle,ilkSayfaTitle);
-
+        String actualTitle = Driver.getDriver().getTitle();
+        ilkSayfaTitle = "WebDriverUniversity.com";
+        Assert.assertEquals(actualTitle, ilkSayfaTitle);
 
 
         ReusableMethods.bekle(2);
