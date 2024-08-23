@@ -42,5 +42,9 @@
 
 
     </test>
+    <test name="Alisveris testleri">
+        <!--Birden fazla test olusturulabilir-->
+
+    </test>
 
 </suite>

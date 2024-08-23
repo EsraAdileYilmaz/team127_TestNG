@@ -1,4 +1,4 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+ <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <!--
     Eger calisacak test method'larini tek tek xml dosyasina yazmak istemezseniz;
@@ -21,7 +21,9 @@
             
            <packages>
                <package name="tests.*"></package>
-           </packages>
+           </packages><!--Burasi groups testlerinin nerde aranilacagini gosteriyor.
+                          Calisacak groups'lar neredeki test methodlarinda aranacak.
+                          MUTLAKA BULUNMALI-->
 
 
        </test>

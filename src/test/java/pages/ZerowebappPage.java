@@ -7,9 +7,9 @@ import utilities.Driver;
 
 public class ZerowebappPage {
 
-    public ZerowebappPage(){
+    public ZerowebappPage() {
 
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "//button[@id='signin_button']")

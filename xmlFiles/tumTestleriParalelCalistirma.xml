@@ -9,12 +9,11 @@
                       gorev paylasimi sirasinda;
                       - yukun mumkun oldugunca browser'lara esit dagitilmasi
                       - baglantili method'larin ayni browser tarafindan calistirilmasi
-                      durumlari gozonune alinmalidir.
-
-        verbose :  1-10 arasi deger alir,
-                   test calistirma sonrasinda
-                   consolda cikan kirmizi yazilarin az veya cok olmasini belirler.
-                   1 en az , 10 en cok demektir.
+                        durumlari gozonune alinmalidir.
+        3-verbose : 1-10 arasi deger alir,
+                    test calistirma sonrasinda
+                    consolda cikan kirmizi yazilarin az veya cok olmasini belirler.
+                    1 en az , 10 en cok demektir.
     -->
 
     <test name="paralel 1.browser">

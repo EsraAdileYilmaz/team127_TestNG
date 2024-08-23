@@ -6,7 +6,7 @@
 
           <class name="tests.day15_configuration_driver_Kullanimi.C04_NegatifLoginTesti">
 
-        <!--Bir class'taki tum methodlar calisacaksa tek tek method'lari secmeye gerek yok
+        <!--Bir class'taki tum methodlar calisacaksa tek tek method'lari secmeye gerek yok,
             ama calisacaklari veya calismayacaklari ozellikle belirlemek istersek
             method secimi yapilabilir.
             Bu method secimide ornegin:@Test(groups = "smoke") seklinde eklemelerle yapilabilir.

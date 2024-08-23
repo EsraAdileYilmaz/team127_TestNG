@@ -38,7 +38,7 @@ public class C01_SoftAssertion {
                FAILED olan assertion'lari size raporlar
                ve FAILED olan varsa calismayi durdurur.
                SoftAssert kullanmak icin;
-                1- softAssert objesi olustur
+                1- SoftAssert objesi olustur
                 2- tum assertion'lari softAssert objesi kullanarak yap
                 3- assertion'lar bitince assertAll() ile rapor iste.
 
