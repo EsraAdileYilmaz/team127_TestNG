@@ -13,9 +13,8 @@ import utilities.TestBaseRapor;
 public class C02_DataProviderKullanimi extends TestBaseRapor {
 
 
-
     @Test
-    public void cokluAramaTesti(){
+    public void cokluAramaTesti() {
 
 
        /*
@@ -24,19 +23,19 @@ public class C02_DataProviderKullanimi extends TestBaseRapor {
             elemanlari bir array'e atayip
             for loop ile testleri yapmak istedik.
 
-            ANCAK, ilk failed olan urunde
+            ANCAK, ilk failed olan urunde,
             assertion exception firlatip calismayi durdurdu ve
             geriye kalan urunlerin var olup olmadigini kontrol etmedi.
          */
 
-        String [] aranacakUrunler={"phone","java","dress","nutella","chair","tea"};
+        String[] aranacakUrunler = {"phone", "java", "dress", "nutella", "chair", "tea"};
         String arananUrun;
-        TestOtomasyonuPage testOtomasyonuPage=new TestOtomasyonuPage();
+        TestOtomasyonuPage testOtomasyonuPage = new TestOtomasyonuPage();
         int actualUrunSayisi;
 
-        for (int i = 0; i < aranacakUrunler.length ; i++) {
+        for (int i = 0; i < aranacakUrunler.length; i++) {
 
-            arananUrun=aranacakUrunler[i];
+            arananUrun = aranacakUrunler[i];
 
             // testotomasyonu anasayfaya gidin
             Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
@@ -47,7 +46,7 @@ public class C02_DataProviderKullanimi extends TestBaseRapor {
 
 
             // her bir urun icin arama yapildiginda sonuc bulunabildigini test edin
-            actualUrunSayisi=testOtomasyonuPage.bulunanUrunElementleriList.size();
+            actualUrunSayisi = testOtomasyonuPage.bulunanUrunElementleriList.size();
             Assert.assertTrue(actualUrunSayisi > 0);
 
 
@@ -61,17 +60,15 @@ public class C02_DataProviderKullanimi extends TestBaseRapor {
         // data provider bize iki katli obje array'i donduren
         // bir method'dur.
 
-        String [][] aranacakUrunler={{"phone"},{"java"},{"dress"},{"nutella"},{"chair"},{"tea"}};
+        String[][] aranacakUrunler = {{"phone"}, {"java"}, {"dress"}, {"nutella"}, {"chair"}, {"tea"}};
 
         return aranacakUrunler;
     }
 
 
-
-
     @Test(dataProvider = "aranacakUrunlerDataProvider")
-    public void dataProviderIleCokluAramaTesti(String arananUrun){
-        extentTest = extentReports.createTest("data provider test","Belirlenen urun listesi icin arama yapilabilmeli");
+    public void dataProviderIleCokluAramaTesti(String arananUrun) {
+        extentTest = extentReports.createTest("data provider test", "Belirlenen urun listesi icin arama yapilabilmeli");
 
         // testotomasyonu anasayfaya gidin
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
@@ -79,21 +76,18 @@ public class C02_DataProviderKullanimi extends TestBaseRapor {
 
         // verilen urun listesindeki tum urunler icin arama yapip
         // urun listesi : phone, java, dress, nutella, chair, tea
-        TestOtomasyonuPage testOtomasyonuPage=new TestOtomasyonuPage();
+        TestOtomasyonuPage testOtomasyonuPage = new TestOtomasyonuPage();
         testOtomasyonuPage.aramaKutusu.sendKeys(arananUrun + Keys.ENTER);
-        extentTest.info("verilen listesindeki " +arananUrun +" icin arama yapar");
+        extentTest.info("verilen listesindeki " + arananUrun + " icin arama yapar");
         ReusableMethods.bekle(2);
 
         // her bir urun icin arama yapildiginda sonuc bulunabildigini test edin
-        int actualUrunSayisi=testOtomasyonuPage.bulunanUrunElementleriList.size();
+        int actualUrunSayisi = testOtomasyonuPage.bulunanUrunElementleriList.size();
         Assert.assertTrue(actualUrunSayisi > 0);
-        extentTest.pass(arananUrun+" icin arama yapildiginda sonuc bulunabildigini test eder");
-
-
+        extentTest.pass(arananUrun + " icin arama yapildiginda sonuc bulunabildigini test eder");
 
 
     }
-
 
 
 }

@@ -10,7 +10,7 @@ public class TestBaseCross {
 
     @Parameters("crossBrowser")
     @BeforeMethod
-    public void setUp(@Optional String crossBrowser){
+    public void setUp(@Optional String crossBrowser){//@Parameters("crossBrowser") icindeki degeri parametre olarak alir
 
         driver= DriverCross.getDriver(crossBrowser);
     }

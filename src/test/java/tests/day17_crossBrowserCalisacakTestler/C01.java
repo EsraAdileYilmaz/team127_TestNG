@@ -13,13 +13,13 @@ import java.util.List;
 public class C01 extends TestBaseCross {
 
     @Test
-    public void aramaTesti(){
+    public void aramaTesti() {
 
-        driver.get(ConfigReader.getProperty("toUrl"));
+        driver.get(ConfigReader.getProperty("toUrl"));// driver= DriverCross.getDriver(crossBrowser); boyle bir atama yapildigi icin driver olarak kullaniyoruz.
 
         // phone icin arama yapin
 
-        WebElement aramaKutusu = driver.findElement(By.id("global-search"));
+        WebElement aramaKutusu = driver.findElement(By.id("global-search"));//yeniden locate'leri yazmak gerekiyor.cunku driver degisti
 
         aramaKutusu.sendKeys("phone" + Keys.ENTER);
 
@@ -28,7 +28,7 @@ public class C01 extends TestBaseCross {
         List<WebElement> bulunanUrunElementleriList =
                 driver.findElements(By.xpath("//div[@class= 'product-box my-2  py-1']"));
 
-        int actualSonucSayisi  = bulunanUrunElementleriList.size();
+        int actualSonucSayisi = bulunanUrunElementleriList.size();
 
         Assert.assertTrue(actualSonucSayisi > 0);
 

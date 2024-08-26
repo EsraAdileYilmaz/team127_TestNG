@@ -19,12 +19,12 @@ public class C02 extends TestBaseCross {
         su degisiklikleri yapmak lazim;
         1- TestBaseCross'a extends yapilmali
         2- Driver.getDriver() yerine TestBaseCross'dan gelen driver objesi kullanin
-        3- Page class'lari Driver.getDriver() ile tanimlandigindan kullanamayiz
+        3- Page class'lari Driver.getDriver() ile tanimlandigindan kullanamayiz,
            locate'leri test method'u icinde (JUnitteki gibi) driver objesi ile yapmaliyiz.
      */
 
     @Test
-    public void dropdownTesti(){
+    public void dropdownTesti() {
 
         //● https://testotomasyonu.com/form adresine gidin.
         driver.get("https://testotomasyonu.com/form");
@@ -43,7 +43,7 @@ public class C02 extends TestBaseCross {
         selectYil.selectByVisibleText("1990");
         //	4. Secilen değerleri konsolda yazdirin
         System.out.println(selectGun.getFirstSelectedOption().getText() + "/" +
-                           selectAy.getFirstSelectedOption().getText()+"/"+
+                           selectAy.getFirstSelectedOption().getText() + "/" +
                            selectYil.getFirstSelectedOption().getText());
         //	5. Ay dropdown menüdeki tum değerleri(value) yazdırın
 
@@ -52,7 +52,7 @@ public class C02 extends TestBaseCross {
 
 
         //	6. Ay Dropdown menusunun boyutunun 13 olduğunu test edin
-        Assert.assertEquals(selectAy.getOptions().size(),13);
+        Assert.assertEquals(selectAy.getOptions().size(), 13);
 
         ReusableMethods.bekle(3);
 

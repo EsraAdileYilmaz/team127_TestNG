@@ -31,7 +31,7 @@ public abstract class TestBaseRapor {
         extentHtmlReporter.config().setReportName("TestNG Reports");
     }
 
-    // Her test methodundan sonra eğer testte hata varsa, ekran görüntüsü alıp rapora ekliyor.
+    // Her test methodundan sonra eğer testte hata(failed) varsa, ekran görüntüsü alıp rapora ekliyor.
     @AfterMethod(alwaysRun = true)
     public void tearDownMethod(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) { // eğer testin sonucu başarısızsa

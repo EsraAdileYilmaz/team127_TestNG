@@ -11,7 +11,7 @@ import utilities.ReusableMethods;
 
 public class C03_DataProviderIleNegatifLoginTesti {
     @AfterTest
-    public void teardown(){
+    public void teardown() {
         Driver.quitDriver();
     }
 
@@ -19,21 +19,21 @@ public class C03_DataProviderIleNegatifLoginTesti {
     @DataProvider
     public static Object[][] kullaniciBilgileriDataProvider() {
 
-        String [][] kullaniciBilgileri ={{"kullanici1", "12345"},
-                {"kullanici2", "23456"}, {"kullanici3", "34567"},
-                {"kullanici4", "45678"}, {"kullanici5", "56789"}};
+        String[][] kullaniciBilgileri = {{"kullanici1", "12345"},
+                                         {"kullanici2", "23456"}, {"kullanici3", "34567"},
+                                         {"kullanici4", "45678"}, {"kullanici5", "56789"}};
 
         return kullaniciBilgileri;//kullaniciBilgiler cift katli bir arraydir
     }
 
-    @Test (dataProvider = "kullaniciBilgileriDataProvider")
-    public void cokluNegatifLoginTesti(String username,String password){
+    @Test(dataProvider = "kullaniciBilgileriDataProvider")
+    public void cokluNegatifLoginTesti(String username, String password) {
 
         // testotomasyonu anasayfaya gidin
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
 
         // account linkine tiklayin
-        TestOtomasyonuPage testOtomasyonuPage=new TestOtomasyonuPage();
+        TestOtomasyonuPage testOtomasyonuPage = new TestOtomasyonuPage();
         testOtomasyonuPage.accountButonu.click();
 
 
@@ -48,15 +48,13 @@ public class C03_DataProviderIleNegatifLoginTesti {
         ReusableMethods.bekle(2);
 
 
-
-
         // kullanici1   12345
         // kullanici2   23456
         // kullanici3   34567
         // kullanici4   45678
         // kullanici5   56789
         //yani disardan bana=> (kullanici adi,  sifre) gelicek.benimde bunu parametre olarak girmem lazim
-        //bunlari da bir data providerden alicam.
+        //bunlari da bir data providerden alicam.(String username, String password)
 
 
     }
